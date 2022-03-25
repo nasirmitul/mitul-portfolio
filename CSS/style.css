@@ -1,0 +1,804 @@
+:root{
+    --primary: #8b38ff;
+    --primary-light: #742fd4;
+    --light: #EBEAEC;
+    --dark: #212121;
+    --dark_one: #323746;
+    --dark-two: #242735;
+    --text: #494949;
+    --text-two: #EAECF3;
+    --text-three: #7a7a7a;
+    --bg-one: #f1f1f1;
+    --bg-two: #EAECF3;
+    --red: #f5deb3;
+    --shadoww: 1px 1px 7px 2px rgba(139, 56, 255, 0.5);
+    --shadow: rgba(139, 56, 255, 0.075);
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    width: min(95%, 1600px);
+    /* max-width: 75%; */
+    margin-inline: auto;
+    /* margin: 0 auto; */
+}
+
+span{
+    color: var(--primary);
+}
+
+html{
+    overflow-x: hidden;
+}
+
+/*.cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--primary);
+    transition: 0.1s;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+h1.cursor:hover{
+    transform: scale(2);
+}
+ .home .home-text:hover ~ .cursor {
+    transform: scale(6);
+} */
+
+/* ========================= Common part End ========================= */
+
+
+/* ========================= Nav part Start ========================= */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--primary);
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    padding: 0 100px;
+    box-shadow: var(--shadoww);
+    z-index: 1;
+}
+label.logo{
+    color: var(--light);
+    font-size: 40px;
+    font-weight: 800;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+}
+nav ul li{
+    display: inline-block;
+}
+nav ul li a{
+    color: var(--light);
+    font-size: 14px;
+    font-weight: 500;
+    padding-left: 30px;
+    text-transform: uppercase;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+/* ========================= Nav part End ========================= */
+
+
+/* ========================= Main part Start ========================= */
+.home-info{
+    /* cursor: none; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-info .image img{
+    width: 150px;
+    height: auto;
+    border: 4px solid var(--primary);
+    border-radius: 50%;
+    box-shadow: 0px 0px 7px 2px rgba(139, 56, 255, 0.3);
+    margin-bottom: 15px;
+    background: linear-gradient(45deg, rgba(116, 47, 212, 0.1), rgba(139, 56, 255, 0.5));
+}
+
+.home-info .detail{
+    text-align: center;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.home-info .detail h1{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.home-info .detail h3{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.home-info .social-icon{
+    margin-bottom: 40px;
+}
+
+.home-info .social-icon ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+.home-info .social-icon ul li a{
+    margin: 0 15px;
+    color: var(--primary-light);
+    transition: .6s ease;
+}
+
+.home-info .social-icon ul li a:hover{
+    color: var(--primary);
+}
+
+.home-info .button .learn{
+    background-color: var(--primary);
+    color: var(--text-two);
+}
+
+.home-info .button .learn:hover{
+    background-color: transparent;
+    color: var(--dark);
+}
+
+.header .line{
+    height: 70px;
+    width: 5.5px;
+    background-color: var(--primary);
+    border-radius: 20px;
+    position: absolute;
+    bottom: -35px;
+}
+/* ========================= Main part ENd ========================= */
+
+
+/* ========================= About part Start ========================= */
+.about{
+    background-color: var(--bg-two);
+    padding: 90px 0;
+}
+
+.about .about-main{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.about .about-main img{
+    height: 450px;
+    width: 450px;
+    border: 10px solid var(--bg-one);
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px 2px var(--shadow);
+    margin-right: 50px;
+}
+
+.about .about-right .text{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--dark_one);
+    margin-bottom: 30px;
+}
+
+
+.about .about-right .quality{
+    margin-bottom: 5px;
+}
+
+.about .about-right .quality .icon,
+.about .about-right .experience .icon{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.about .about-right .quality h3,
+.about .about-right .experience h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #494949;
+    margin-left: 10px;
+}
+
+.about .about-right .quality p,
+.about .about-right .experience p{
+    font-size: 1rem;
+    font-weight: 300;
+    color: #494949;
+}
+
+.about .skills-name{
+    margin: 35px 0;
+}
+
+.about .skills-name span{
+    border: 2px solid var(--primary);
+    padding: 5px 13px;
+    line-height: 40px;
+}
+
+.about .about-right .button i{
+    padding-left: 10px;
+    color: var(--dark_one);
+    font-size: 1.1rem;
+}
+/* ========================= About part End ========================= */
+
+
+/* ========================= Skils part Start ========================= */
+.skills{
+    padding: 90px 0;
+    background-color: var(--bg-one);
+}
+
+.skills .all-skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-bar{
+    width: 370px;
+}
+
+.skill-bar h2{
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text);
+    padding-bottom: 25px;
+}
+
+.skill-name:not(:last-child){
+    margin-bottom: 20px;
+}
+.details{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+.bar{
+    background-color: var(--bg-two);
+    border: 1px solid #fff;
+    padding: 5px 6px;
+    border-radius: 20px;
+}
+.bar div{
+    width: 0;
+    height: 5px;
+    border-radius: 20px;
+    background-color: #8b38ff2d;
+    border: 1px solid var(--primary);
+    box-shadow: 0 0 5px var(--shadow);
+}
+#bar-one{
+    animation: fill-one 2s forwards;
+}
+@keyframes fill-one{
+    100%{
+        width: 90%;
+    }
+}
+#bar-two{
+    animation: fill-two 2s forwards;
+}
+@keyframes fill-two{
+    100%{
+        width: 75%;
+    }
+}
+#bar-three{
+    animation: fill-three 2s forwards;
+}
+@keyframes fill-three {
+    100%{
+        width: 82%;
+    }
+}
+#bar-four{
+    animation: fill-four 2s forwards;
+}
+@keyframes fill-four{
+    100%{
+        width: 68%;
+    }
+}
+
+/* ========================= Skills part End ========================= */
+
+
+/* ========================= services part Start ========================= */
+.services{
+    padding: 90px 0;
+    background-color: var(--bg-two);
+}
+
+.services .service-main{  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    border: 0px;
+    margin: auto; 
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1100px;
+}
+
+.services .service-main .service-box{
+    width: 310px;
+    height: 400px;
+    margin: 10px 0;
+    padding: 130px 70px 10px 39px;
+    background-color: var(--bg-one);
+    box-shadow: 1px 1px 7px 2px var(--shadow);
+    transition: transform 0.6s;
+    border-radius: 5px;
+}
+
+.services .service-main .service-box:hover{
+    box-shadow: 3px 3px 10px 2px var(--shadow);
+    transform: translateY(-6px);
+}
+
+.services .service-main .service-box #top{
+    font-size: 3rem;
+    color: var(--primary);
+    font-weight: 700;
+    margin-left: -2px;
+    padding-bottom: 10px;
+}
+
+.services .service-main .service-box h2{
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.services .service-main .service-box .learn{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    cursor: pointer;
+    transition: transform 0.6s;
+}
+
+.services .service-main .service-box .learn:hover{
+    color: var(--primary);
+    transform: translateX(6px);
+}
+
+.services .service-main .service-box p{
+    font-size: 15px;
+    color: var(--text-three);
+    padding-right: 5px;
+}
+
+.services .service-main .service-box .bottom{
+    font-size: 1.1rem;
+    color: var(--primary);
+}
+/* ========================= services part End ========================= */
+
+
+/* ========================= portfolio part Start ========================= */
+.portfolio{
+    padding: 90px 0;
+    background-color: var(--bg-one);
+}
+.portfolio .portfolio-main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfolio .portfolio-main .one,
+.portfolio .portfolio-main .two{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio .portfolio-main .image{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 2px rgba(139, 56, 255, 0.2);
+}
+
+.portfolio .portfolio-main img{
+    width: 310px;
+    height: auto;
+    cursor: pointer;
+    transition: 0.6s ease;
+}
+.portfolio .portfolio-main img:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 10px 2px rgba(139, 56, 255, 0.4);
+}
+.portfolio-main .see-more-btn{
+    margin-top: 50px;
+    background: var(--primary);
+    color: var(--light);
+}
+
+.portfolio-main .see-more-btn:hover{
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.portfolio-main .expand{
+    width: 100%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    border: none;
+    outline: none;
+}
+
+.portfolio-main .expand-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    background-color: var(--light);
+    margin: 15px 20px 15px 0;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.portfolio-main .expand i{
+    font-size: 1.4rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.portfolio-main .detail-site{
+    text-align: start;
+}
+
+.portfolio-main .detail-site h2{
+    color: var(--light);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.portfolio-main .detail-site p{
+    color: var(--light);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+/* ========================= portfolio part End ========================= */
+
+
+/* ========================= contact part Start ========================= */
+.contact{
+    padding: 90px 0;
+    background-color: var(--bg-two);
+}
+
+.contact .main-contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-contact .contact-left{
+    margin-right: 40px;
+}
+
+.main-contact .contact-left .info{
+    display: flex;
+    align-items: center;
+    background: var(--bg-one);
+    box-shadow: 0 0 8px 2px rgba(139, 56, 255, 0.2);
+    border-radius: 4px;
+    margin: 10px 0;
+    padding: 20px 90px 20px 20px;
+}
+
+.contact-left i{
+    height: 80px;
+    width: 80px;
+    border: 2px solid var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-size: 2rem;
+    color: var(--primary);
+    margin-right: 20px;
+}
+
+.contact-left .detail h2{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.contact-left .detail h3{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.contact .contact-right{
+    height: auto;
+    width: 40%; 
+    margin-left: 40px;
+}
+
+.contact-right .form .common{
+    background-color: transparent;
+    border: 1px solid var(--primary);
+    border-radius: 5px;
+    padding: 17px 20px;
+    width: 100%;
+    font-size: 17px;
+}
+
+.contact .contact-right .phone-email{
+    display: flex;
+    margin: 10px 0;
+}
+
+.contact .contact-right #phone{
+    width: 50%;
+    margin-right: 5px;
+}
+
+.contact .contact-right #mail{
+    width: 50%;
+    margin-left: 5px;
+}
+
+.contact-right .form .message textarea{
+    height: 160px;
+}
+
+.main-contact .contact-right .message-button{
+    margin: 15px 0;
+    background-color: var(--primary);
+    color: var(--bg-two);
+    transition: transform 0.6s;
+}
+.main-contact .contact-right .message-button:hover{
+    background-color: transparent;
+    color: var(--primary);
+    transform: translateX(6px);
+}
+/* ========================= contact part End ========================= */
+
+
+/* ========================= Footer part Start ========================= */
+footer{
+    padding: 50px 0;
+    background-color: #8b38ffdc;
+}
+
+.last{
+    background-color: var(--primary);
+    color: var(--text-two);
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer h3,
+footer a{
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--light);
+}
+
+footer .part-one .mail{
+    color: #f5deb3;
+}
+
+
+footer .part-one .social-icon{
+    padding-top: 30px;
+}
+
+footer .part-one ul{
+    list-style: none;
+    display: flex;
+}
+
+footer .part-one ul li{
+    height: 40px;
+    width: 40px;
+    border: 2px solid var(--red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+footer .part-one ul li a{
+    font-size: 1.5rem;
+}
+
+footer .part-two{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .part-two h2{
+    font-size: 1.6rem;
+    color: var(--light);
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-transform: capitalize;
+}
+
+footer .part-two button{
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 8px 30px;
+    background: transparent;
+    border: 2px solid var(--red);
+    color: var(--light);
+    cursor: pointer;
+}
+
+footer .part-three{
+    text-align: right;
+}
+
+footer .part-three .direction{
+    padding-top: 30px;
+}
+
+footer .part-three .direction u{
+    font-size: 1.3rem;
+    color: var(--light);
+    cursor: pointer;
+}
+/* ========================= Footer part End ========================= */
+
+
+/* ====================== Button start ====================== */
+.detail-button{
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    padding: 12px 20px;
+    border: 1px solid var(--primary);
+    cursor: pointer;
+    margin-right: 20px;
+    transition: transform 0.6s;
+    background-color: transparent;
+}
+
+.detail-button:hover{
+    transform: translateX(-6px);
+    background-color: var(--primary);
+    color: var(--light);
+}
+/* ====================== Button end ====================== */
+
+
+/* ================= Section head part start ================= */
+.head .heading{
+    display: flex;
+    align-items: center;
+    padding-bottom: 7px;
+}
+
+.head .heading .title{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-two);
+    margin-right: 20px;
+}
+
+.head .heading i{
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.head p{
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.head{
+    padding-bottom: 50px;
+}
+/* ================= Section head part end ================= */
+
+/* ================= GoToTop custom design================= */
+.totop {
+	position: fixed;
+	bottom: 50px;
+	right: 30px;
+	font-size: 2rem;
+	background: rgba(116, 47, 212, 0.8);
+	color: var(--light);
+	height: auto;
+	width: 3rem;
+	text-align: center;
+	border-radius: 3px;
+    transition: transform 0.6s;
+}
+
+.totop:hover{
+    transform: translateY(-5px);
+    background: var(--primary);
+    color: var(--bg-two);
+}
+
+/* ================= Scrollbar Styling ================= */
+::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: var(--light);
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 20px;
+    background: var(--primary); 
+}
+
+.myDashLogin{
+    display: none;
+}
