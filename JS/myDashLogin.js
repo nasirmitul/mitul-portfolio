@@ -24,7 +24,6 @@ function validate()
     let password = document.getElementById("password").value;
     let message = document.getElementById("message");
 
-
     if(username =="nasirmitul" && password == "user")
     {
         message.textContent = "Login Successfull";
